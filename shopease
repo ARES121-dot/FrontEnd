@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0">
+
+    <title>ShopEase</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <header class="navbar">
+
+    <div class="logo">
+        Shop<span>Ease</span>
+    </div>
+
+    <nav>
+        <a href="#">Home</a>
+        <a href="#">Products</a>
+        <a href="#">Offers</a>
+        <a href="#">Contact</a>
+    </nav>
+
+    <div class="nav-actions">
+        <button>🔍</button>
+        <button>🛒</button>
+    </div>
+
+</header>
+
+        <section class="hero" id="home">
+
+    <div class="hero-content">
+
+        <p class="tag">NEW COLLECTION 2026</p>
+
+        <h1>
+            Upgrade Your
+            <span>Everyday Style</span>
+        </h1>
+
+        <p class="hero-text">
+            Discover trending fashion, electronics and
+            accessories at prices you'll love.
+        </p>
+
+        <a href="#products" class="hero-btn">
+            Shop Now →
+        </a>
+
+    </div>
+
+    <div class="hero-card">
+
+        <div class="sale-badge">
+            SALE
+            <strong>50%</strong>
+            OFF
+        </div>
+
+        <div class="product-visual">
+            🛍️
+        </div>
+
+    </div>
+
+</section>
+
+</body>
+
+</html>
+
+</section>
+
+<section class="products-section" id="products">
+
+    <div class="section-heading">
+
+        <div>
+            <p class="tag">OUR PRODUCTS</p>
+            <h2>Popular Products</h2>
+        </div>
+
+        <button class="view-all">
+            View All →
+        </button>
+
+    </div>
+
+
+    <div class="product-grid">
+
+        <!-- Product 1 -->
+        <article class="product-card">
+
+            <div class="product-image">
+                👟
+            </div>
+
+            <div class="product-info">
+
+                <small>Footwear</small>
+
+                <h3>Urban Running Shoes</h3>
+
+                <p class="rating">
+                    ★★★★★
+                </p>
+
+                <strong>₹2,399</strong>
+
+                <button class="add-cart">
+                    Add to Cart
+                </button>
+
+            </div>
+
+        </article>
+
+
+        <!-- Product 2 -->
+        <article class="product-card">
+
+            <div class="product-image">
+                🎧
+            </div>
+
+            <div class="product-info">
+
+                <small>Electronics</small>
+
+                <h3>Wireless Headphones</h3>
+
+                <p class="rating">
+                    ★★★★★
+                </p>
+
+                <strong>₹3,399</strong>
+
+                <button class="add-cart">
+                    Add to Cart
+                </button>
+
+            </div>
+
+        </article>
+
+
+        <!-- Product 3 -->
+        <article class="product-card">
+
+            <div class="product-image">
+                ⌚
+            </div>
+
+            <div class="product-info">
+
+                <small>Accessories</small>
+
+                <h3>Smart Watch Pro</h3>
+
+                <p class="rating">
+                    ★★★★☆
+                </p>
+
+                <strong>₹4,499</strong>
+
+                <button class="add-cart">
+                    Add to Cart
+                </button>
+
+            </div>
+
+        </article>
+
+
+        <!-- Product 4 -->
+        <article class="product-card">
+
+            <div class="product-image">
+                🎒
+            </div>
+
+            <div class="product-info">
+
+                <small>Fashion</small>
+
+                <h3>Premium Travel Bag</h3>
+
+                <p class="rating">
+                    ★★★★★
+                </p>
+
+                <strong>₹1,799</strong>
+
+                <button class="add-cart">
+                    Add to Cart
+                </button>
+
+            </div>
+
+        </article>
+
+    </div>
+
+</section>
