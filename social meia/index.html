@@ -1,0 +1,223 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ConnectHub | Social Network</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<!-- LOGIN AND SIGNUP -->
+<section id="auth">
+    <div class="auth-card">
+        <h1 class="logo">✦ ConnectHub</h1>
+
+        <div id="loginBox">
+            <h2>Welcome Back!</h2>
+            <p class="subtitle">Connect with your community.</p>
+
+            <input id="loginUser" placeholder="Username">
+            <input id="loginPass" type="password" placeholder="Password">
+
+            <button class="primary-btn" onclick="login()">Login</button>
+
+            <p id="loginError" class="error"></p>
+
+            <p class="switch-text">
+                Don't have an account?
+                <span onclick="showSignup()">Create Account</span>
+            </p>
+        </div>
+
+        <div id="signupBox" class="hidden">
+            <h2>Create Account</h2>
+            <p class="subtitle">Join ConnectHub today.</p>
+
+            <input id="regName" placeholder="Full Name">
+            <input id="regUser" placeholder="Username">
+            <input id="regEmail" type="email" placeholder="Email">
+            <input id="regPass" type="password" placeholder="Password">
+
+            <button class="primary-btn" onclick="signup()">Sign Up</button>
+
+            <p id="signupError" class="error"></p>
+
+            <p class="switch-text">
+                Already registered?
+                <span onclick="showLogin()">Login</span>
+            </p>
+        </div>
+    </div>
+</section>
+
+<!-- MAIN APPLICATION -->
+<section id="app" class="hidden">
+
+    <!-- TOP NAVIGATION -->
+    <header class="topbar">
+        <h1 class="brand">✦ ConnectHub</h1>
+
+        <input
+            type="text"
+            id="search"
+            placeholder="Search people..."
+            oninput="renderPeople()"
+        >
+
+        <button class="logout-btn" onclick="logout()">Logout</button>
+    </header>
+
+    <div class="layout">
+
+        <!-- LEFT SIDEBAR -->
+        <aside class="sidebar">
+
+            <div class="nav-item active" onclick="showPage('home',this)">
+                🏠 Home
+            </div>
+
+            <div class="nav-item" onclick="showPage('explore',this)">
+                🌍 Explore
+            </div>
+
+            <div class="nav-item" onclick="showPage('people',this)">
+                👥 People
+            </div>
+
+            <div class="nav-item" onclick="showPage('profile',this)">
+                👤 My Profile
+            </div>
+
+        </aside>
+
+        <!-- MAIN CONTENT -->
+        <main class="feed">
+
+            <!-- HOME PAGE -->
+            <div id="homePage">
+
+                <div class="panel create-panel">
+                    <h2>Create a Post ✨</h2>
+
+                    <textarea
+                        id="postText"
+                        placeholder="What's happening in your world?"
+                    ></textarea>
+
+                    <div class="post-actions">
+
+                        <label class="upload-label">
+                            📷 Add Photo
+                            <input
+                                type="file"
+                                id="postFile"
+                                accept="image/*"
+                            >
+                        </label>
+
+                        <button class="primary-btn" onclick="createPost()">
+                            Publish Post
+                        </button>
+
+                    </div>
+                </div>
+
+                <h2 class="section-title">Your Feed</h2>
+
+                <div id="feed"></div>
+
+            </div>
+
+            <!-- EXPLORE PAGE -->
+            <div id="explorePage" class="hidden">
+
+                <h2 class="section-title">Explore 🌍</h2>
+
+                <p class="muted">
+                    Discover posts from your community.
+                </p>
+
+                <div id="exploreFeed"></div>
+
+            </div>
+
+            <!-- PEOPLE PAGE -->
+            <div id="peoplePage" class="hidden">
+
+                <h2 class="section-title">Discover People 👥</h2>
+
+                <div class="panel">
+                    <div id="peopleList"></div>
+                </div>
+
+            </div>
+
+            <!-- PROFILE PAGE -->
+            <div id="profilePage" class="hidden">
+
+                <div class="panel profile-header" id="myProfile"></div>
+
+                <h2 class="section-title">My Posts</h2>
+
+                <div id="myPosts"></div>
+
+            </div>
+
+        </main>
+
+        <!-- RIGHT SIDEBAR -->
+        <aside class="rightbar">
+
+            <div class="my-account">
+                <h3>Your Profile</h3>
+
+                <div class="avatar large-avatar" id="sideAvatar">U</div>
+
+                <h3 id="sideName">User</h3>
+
+                <p class="muted" id="sideUsername">@username</p>
+            </div>
+
+            <hr>
+
+            <!-- INSTAGRAM STYLE SUGGESTIONS -->
+            <div class="suggestions">
+
+                <h3>Suggested for You</h3>
+
+                <p class="muted">People you may know</p>
+
+                <div id="suggestedList"></div>
+
+                <button class="see-all" onclick="showPage('people',null)">
+                    See All
+                </button>
+
+            </div>
+
+            <hr>
+
+            <div class="community">
+                <h3>Community</h3>
+
+                <p class="muted">
+                    Connect with people and share ideas.
+                </p>
+            </div>
+
+            <p class="copyright">© 2026 ConnectHub</p>
+
+        </aside>
+
+    </div>
+
+</section>
+
+<div id="toast"></div>
+
+<script src="script.js"></script>
+
+</body>
+</html>
